@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_dir
+    username: springstudent
+    password: springstudent
+  jwt:
+    secret: f56ccf8e79ced26f9bee60ea49ed528924eb7a7d2a7d07cff410616ae03e6f02
