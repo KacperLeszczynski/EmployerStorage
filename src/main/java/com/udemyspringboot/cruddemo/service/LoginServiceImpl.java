@@ -1,9 +1,12 @@
 package com.udemyspringboot.cruddemo.service;
 
 import com.udemyspringboot.cruddemo.dao.EmployerRepository;
+import com.udemyspringboot.cruddemo.dto.EmployerDTO;
 import com.udemyspringboot.cruddemo.dto.LoginDTO;
 import com.udemyspringboot.cruddemo.dto.LoginResponseDTO;
+import com.udemyspringboot.cruddemo.entity.Employee;
 import com.udemyspringboot.cruddemo.entity.Employer;
+import com.udemyspringboot.cruddemo.mapper.EmployerMapper;
 import com.udemyspringboot.cruddemo.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -46,8 +49,9 @@ public class LoginServiceImpl implements LoginService{
     }
 
     @Override
-    public boolean registerEmployer(Employer employer) {
+    public boolean registerEmployer(EmployerDTO employerDTO) {
         try {
+            Employer employer = EmployerMapper.mapToEmployer(employerDTO, new Employer());
             employer.setPassword(passwordEncoder.encode(employer.getPassword()));
             employerRepository.save(employer);
             return true;
