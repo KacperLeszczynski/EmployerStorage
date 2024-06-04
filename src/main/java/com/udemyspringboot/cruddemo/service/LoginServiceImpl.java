@@ -38,9 +38,9 @@ public class LoginServiceImpl implements LoginService{
             return null;
         }
 
-        Employer employer = optionalEmployer.get();;
+        Employer employer = optionalEmployer.get();
 
-        if (passwordEncoder.matches(loginDTO.getPassword(), employer.getPassword())) {
+        if (!passwordEncoder.matches(loginDTO.getPassword(), employer.getPassword())) {
             return null;
         }
 
