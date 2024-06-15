@@ -32,15 +32,14 @@ CREATE TABLE `employee` (
 -- Data for table `employee`
 --
 
-INSERT INTO `employer` VALUES 
+INSERT INTO `employer` VALUES
 	(1,'ArturTuczynski', '$2a$10$fQK2zLRhVLUTNfw2049vz.QIdut3zFWeeu030cNWjfbOijCYB47o2', 'Google'),
 	(2,'FilipMajewski', '$2a$10$fQK2zLRhVLUTNfw2049vz.QIdut3zFWeeu030cNWjfbOijCYB47o2', 'Netflix');
 
 
-INSERT INTO `employee` VALUES 
+INSERT INTO `employee` VALUES
 	(1,'Leslie','Andrews','leslie@luv2code.com', 41, 1),
 	(2,'Emma','Baumgarten','emma@luv2code.com', 32, 1),
 	(3,'Avani','Gupta','avani@luv2code.com', 35, 1),
 	(4,'Yuri','Petrov','yuri@luv2code.com', 28, 2),
 	(5,'Juan','Vega','juan@luv2code.com', 50, 2);
-

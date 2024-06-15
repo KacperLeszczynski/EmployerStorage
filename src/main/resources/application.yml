@@ -1,7 +1,18 @@
+server:
+  port: 8080
 spring:
   datasource:
+#    url: ${SPRING_DATASOURCE_URL}
+#    username: ${SPRING_DATASOURCE_USERNAME}
+#    password: ${SPRING_DATASOURCE_PASSWORD}
     url: jdbc:mysql://localhost:3306/employee_dir
     username: springstudent
     password: springstudent
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
   jwt:
     secret: f56ccf8e79ced26f9bee60ea49ed528924eb7a7d2a7d07cff410616ae03e6f02
