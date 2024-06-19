@@ -102,8 +102,6 @@ public class EmployeeServiceImplTest {
         // Assert
         verify(jwtUtil, times(1)).extractData(jwtToken);
         verify(employerRepository, times(1)).findById(employer.getId());
-//        verify(employeeRepository, times(1)).save(new Employee(0, "", "", "", 0));
-//        assertNotNull(result);
     }
 
     @Test
